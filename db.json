@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "e77b",
+      "name": "yura",
+      "email": "ibadovunus55@gmail.com",
+      "password": "12313123"
+    },
+    {
+      "id": "167a",
+      "name": "yura",
+      "email": "ibadovunus45@gmail.com",
+      "password": "12313123"
+    },
+    {
+      "id": "7a91",
+      "name": "yura",
+      "email": "yunusmolodes@gmail.com",
+      "password": "4323243242"
+    },
+    {
+      "id": "f5d6",
+      "name": "yura",
+      "email": "steamakkeblana@gmail.com",
+      "password": "3424234242"
+    },
+    {
+      "id": "338b",
+      "name": "yura",
+      "email": "ibadovunus5@gmail.com",
+      "password": "234324234"
+    },
+    {
+      "id": "0cf4",
+      "name": "yura",
+      "email": "ibadovyunus@gmail.com",
+      "password": "yunus2007"
+    }
+  ]
+}

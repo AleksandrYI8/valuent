@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+label{
+    transition: 2s;
+}
+
+input{
+    width: 100%;
+}
