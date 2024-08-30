@@ -35,18 +35,15 @@ function Singin() {
 
     return (
       <div>
-        <label style={{ color: isError ? "red" : "green" }}>
+        <label className={`${isError} ? 'text-red-500' : 'text-green-500'`}>
           {name}
         </label>
         <input
-          style={{
-            borderColor: isError ? "red" : "blue",
-            outlineColor: isError ? "red" : "blue"
-          }}
+          className={`${isError ? 'border-2 border-red-500 outline-red-500':'border-2 border-blue-500 outline-blue-500'} `}
           type={type}
           {...register}
         />
-        {isError && <span style={{color: "red"}} >{errormessage}</span>}
+        {isError && <span className="color-red-500" >{errormessage}</span>}
       </div>
     )
   }
@@ -86,7 +83,7 @@ function Singin() {
 
         
 
-        <Input
+        <Input 
           isError={errors.email}
           name={"email"}
           type={"email"}
