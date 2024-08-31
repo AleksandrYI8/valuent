@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import { Link, useNavigate } from "react-router-dom"
 
+
 function logIn() {
 
   const [update, setUpdate] = useState([])
@@ -29,20 +30,27 @@ function logIn() {
 
 
 
-  function Input({ isError, name, type, register }) {
+  function Input({ isError, name, type, register, img }) {
 
     const errorMessage = isError?.message || '';
 
     return (
-      <div className="flex flex-col w-full">
+      <>
+     <div className="w-full">
+      {errorMessage && <span className="text-red-500 pl-[17%] ">{errorMessage}</span>}
+      <div className="flex relative w-full gap-[0px]">
+        <img className=" flex absolute left-[17%] top-[17%] h-[30px] w-[30px] border-2 border-blue-500 p-[5px] rounded-[50%]" src={img} alt="" />
         <input
-          className={`w-[80%] mb-[20px] rounded-[10px] text-white bg-gray-600 mx-auto pt-[12px] pb-[12px] pl-[20px] text-[16px] ${isError ? 'border-2 border-red-500 outline-red-500' : 'border-2 border-blue-500 outline-blue-500'}`}
+          className={`outline-none mx-auto w-[70%]   rounded-[10px] text-white bg-gray-800 border pt-[10px] border-blue-500 pb-[12px] pl-[50px] text-[16px] ${isError ? 'border-2 border-red-500' : 'border-2 border-blue-500'}` }
           type={type}
           placeholder={name}
           {...register}
         />
-        {errorMessage && <span style={{ color: 'red' }}>{errorMessage}</span>}
       </div>
+      
+
+     </div>
+      </>
     );
   }
 
@@ -105,15 +113,16 @@ function logIn() {
   return (
     <>
 
-      <div className="w-full mx-auto h-[100vh] bg-custom-radial flex justify-between pl-[10%] pr-[10%]">
-        <form className="bg-blue-500 w-[40%] h-[70%]" onSubmit={handleSubmit(submit)}>
+      <div className=" w-full mx-auto h-[100vh] bg-custom-radial flex items-center gap-[20%] pl-[10%] pr-[10%]">
+        <form className={`flex flex-col items-center shadow-custom-shadow bg-custom-form w-[40%] h-[70%] ${errors.name || errors.email || errors.password ? 'gap-[0px]' : 'gap-[20px]'} `} onSubmit={handleSubmit(submit)}>
 
-          <h1 className=" pt-[80px] text-[36px] text-center text-gray-200 mb-[70px]" >Welcome!</h1>
+          <h1 className={` pt-[70px] text-[36px] text-center text-gray-200 ${errors.name || errors.email || errors.password ? 'mb-[20px]' : 'mb-[20px]'}`} >Welcome!</h1>
 
           <Input
             isError={errors.name}
             name="Name"
             type="text"
+            img="/man.svg"
             register={register("name", {
               pattern: {
                 value: /^[A-Za-zА-Яа-яЁё]{1,20}$/i,
@@ -130,6 +139,7 @@ function logIn() {
             isError={errors.email}
             name="Email"
             type="email"
+            img="/gmail.svg"
             register={register("email", {
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/gi,
@@ -146,6 +156,7 @@ function logIn() {
             isError={errors.password}
             name={"Password"}
             type={"password"}
+            img={"/lock.svg"}
             register={register("password", {
               pattern: {
                 value: /.{6,}/gi,
@@ -157,13 +168,13 @@ function logIn() {
               },
             })}
           />
-          <div className="flex gap-5">
+          <div className={`flex gap-5 ${errors.name || errors.email || errors.password ? 'mt-[20px]' : ''}`}>
             <button className="border-2 border-blue-500 p-[5px]" type="submit">add</button>
             <Link className="border-2 border-blue-500 p-[5px]" to="/singin">sing in</Link>
           </div>
         </form>
 
-        <div className="w-[30%] ">
+        <div className="flex flex-col justify-center w-[30%] ">
           <h1 className="text-[72px] text-blue-500 text-center" >VALUENT</h1>
           <div className="w-[40%] bg-blue-500 h-[3px] rounded mx-auto mb-[5px]"></div>
           <p className="text-center text-[24px] text-gray-200">Your currency dashboard</p>
