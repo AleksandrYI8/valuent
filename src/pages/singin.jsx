@@ -29,7 +29,7 @@ function Singin() {
 
 
 
-  function Input({ isError, name, type, register}) {
+  function Input({ isError, name, type, register }) {
 
     const errormessage = isError?.message || ""
 
@@ -39,7 +39,7 @@ function Singin() {
           {name}
         </label>
         <input
-          className={`${isError ? 'border-2 border-red-500 outline-red-500':'border-2 border-blue-500 outline-blue-500'} `}
+          className={`${isError ? 'border-2 border-red-500 outline-red-500' : 'border-2 border-blue-500 outline-blue-500'} `}
           type={type}
           {...register}
         />
@@ -70,7 +70,7 @@ function Singin() {
       alert("welcome again")
       navigate('/home')
     } else {
-        alert("неверные данные")  
+      alert("неверные данные")
     }
   }
 
@@ -78,12 +78,12 @@ function Singin() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(submit)}>
+      <form className="w-full flex flex-col pl-10 gap-2" onSubmit={handleSubmit(submit)}>
 
 
-        
 
-        <Input 
+
+        <Input
           isError={errors.email}
           name={"email"}
           type={"email"}
@@ -93,7 +93,7 @@ function Singin() {
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/g,
                 message: "Please enter the data correctly"
-              }, 
+              },
               required: {
                 value: true,
                 message: "Is reqired"
@@ -119,9 +119,10 @@ function Singin() {
             })
           }}
         />
-
-        <button type="submit">add</button>
-      <Link to="/">log in</Link>
+        <div className="flex gap-2">
+          <button className="border-2 border-blue-500 p-[5px]" type="submit">add</button>
+          <Link className="border-2 border-blue-500 p-[5px]" to="/">log in</Link>
+        </div>
       </form>
 
     </>
@@ -129,4 +130,3 @@ function Singin() {
 }
 
 export default Singin
-  

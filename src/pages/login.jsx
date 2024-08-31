@@ -34,16 +34,11 @@ function logIn() {
     const errorMessage = isError?.message || '';
 
     return (
-      <div>
-        <label style={{ color: isError ? "red" : "green" }}>
-          {name}
-        </label>
+      <div className="flex flex-col w-full">
         <input
-          style={{
-            borderColor: isError ? "red" : "blue",
-            outlineColor: isError ? "red" : "blue",
-          }}
+          className={`w-[80%] mb-[20px] rounded-[10px] text-white bg-gray-600 mx-auto pt-[12px] pb-[12px] pl-[20px] text-[16px] ${isError ? 'border-2 border-red-500 outline-red-500' : 'border-2 border-blue-500 outline-blue-500'}`}
           type={type}
+          placeholder={name}
           {...register}
         />
         {errorMessage && <span style={{ color: 'red' }}>{errorMessage}</span>}
@@ -109,60 +104,73 @@ function logIn() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(submit)}>
 
+      <div className="w-full mx-auto h-[100vh] bg-custom-radial flex justify-between pl-[10%] pr-[10%]">
+        <form className="bg-blue-500 w-[40%] h-[70%]" onSubmit={handleSubmit(submit)}>
 
-        <Input
-          isError={errors.name}
-          name="Name"
-          type="text"
-          register={register("name", {
-            pattern: {
-              value: /^[A-Za-zА-Яа-яЁё]{1,20}$/i,
-              message: "Please enter the data correctly.",
-            },
-            required: {
-              value: true,
-              message: "Is reqired",
-            },
-          })}
-        />
+          <h1 className=" pt-[80px] text-[36px] text-center text-gray-200 mb-[70px]" >Welcome!</h1>
 
-        <Input
-          isError={errors.email}
-          name="Email"
-          type="email"
-          register={register("email", {
-            pattern: {
-              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/gi,
-              message: "Please enter a valid email address.",
-            },
-            required: {
-              value: true,
-              message: "Is required.",
-            },
-          })}
-        />
+          <Input
+            isError={errors.name}
+            name="Name"
+            type="text"
+            register={register("name", {
+              pattern: {
+                value: /^[A-Za-zА-Яа-яЁё]{1,20}$/i,
+                message: "Please enter the data correctly.",
+              },
+              required: {
+                value: true,
+                message: "Is reqired",
+              },
+            })}
+          />
 
-        <Input
-          isError={errors.password}
-          name={"Password"}
-          type={"password"}
-          register={register("password", {
-            pattern: {
-              value: /.{6,}/gi,
-              message: "Please enter the data correctly.",
-            },
-            required: {
-              value: true,
-              message: "Is reqired",
-            },
-          })}
-        />
+          <Input
+            isError={errors.email}
+            name="Email"
+            type="email"
+            register={register("email", {
+              pattern: {
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/gi,
+                message: "Please enter a valid email address.",
+              },
+              required: {
+                value: true,
+                message: "Is required.",
+              },
+            })}
+          />
 
-        <button type="submit">add</button>
-        <Link to="/singin">sing in</Link>
-      </form>
+          <Input
+            isError={errors.password}
+            name={"Password"}
+            type={"password"}
+            register={register("password", {
+              pattern: {
+                value: /.{6,}/gi,
+                message: "Please enter the data correctly.",
+              },
+              required: {
+                value: true,
+                message: "Is reqired",
+              },
+            })}
+          />
+          <div className="flex gap-5">
+            <button className="border-2 border-blue-500 p-[5px]" type="submit">add</button>
+            <Link className="border-2 border-blue-500 p-[5px]" to="/singin">sing in</Link>
+          </div>
+        </form>
+
+        <div className="w-[30%] ">
+          <h1 className="text-[72px] text-blue-500 text-center" >VALUENT</h1>
+          <div className="w-[40%] bg-blue-500 h-[3px] rounded mx-auto mb-[5px]"></div>
+          <p className="text-center text-[24px] text-gray-200">Your currency dashboard</p>
+        </div>
+
+      </div>
+
 
     </>
   )
