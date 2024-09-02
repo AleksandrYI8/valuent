@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom"
 
 function home() {
     return (
         <>
-        <div className="w-full pl-[2%]">
+        <div className="w-full text-[50px] text-white pl-[2%]">
         <h1>home</h1>
         </div>
 

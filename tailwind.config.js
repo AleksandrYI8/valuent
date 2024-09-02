@@ -27,6 +27,10 @@ export default {
         '.first-letter:uppercase::first-letter': {
           textTransform: 'uppercase',
         },
+        '.no-clear-btn::-webkit-search-cancel-button': {
+          '-webkit-appearance': 'none',
+          'appearance': 'none',
+        }
       });
     },
   ],
