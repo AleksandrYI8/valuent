@@ -1,3 +1,4 @@
+import { Input } from "postcss";
 import { useEffect, useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom"
 
@@ -32,11 +33,11 @@ function Loyaut() {
    console.log(username);
 
     return (
-        <div className="w-full flex gap-[2%]" >
-            <div className="bg-custom-radial flex flex-col justify-between h-[100vh] w-[15%] p-[1%]">
+        <div className="w-full flex bg-custom-main" >
+            <div className=" flex flex-col justify-between h-[100vh] w-[20%] p-[1%] shadow-menu-shadow">
                 <div className="">
-                    <h1 className="text-[35px] text-blue-500 text-center mb-[0px]" >VALUET</h1>
-                    <div className="w-[40%] bg-blue-500 h-[3px] mb-[40px] rounded mx-auto"></div>
+                    <h1 className="text-[25px] text-blue-500 text-center mb-[0px]" >VALUET</h1>
+                    <div className="w-[35%] bg-blue-500 h-[2px] mb-[40px] rounded mx-auto"></div>
 
                     <ul className="flex flex-col " >
                         <li className="group transition-[.2s] hover:bg-gray-600 rounded-[10px] rounded-b-[0]">
@@ -95,10 +96,24 @@ function Loyaut() {
 
             </div>
 
-            <div className="w-[85%]">
+            <div className="w-[80%]">
 
-                <header className="bg-red-500 w-full" >
-                    <h1>Мой сайт</h1>
+                <header className="p-[2%] pt-[1%] pb-0 w-full" >
+                    
+                    <div className="flex items-center w-[100%] mb-[1%]">
+                        <div className="relative w-[25%]">
+                            <input className="z-[1] text-white bg-blue-950 border-none outline-none w-full pt-[7px] pb-[7px] pl-[20px] rounded-[20px]"
+                            type="search" 
+                            placeholder="Searching..."
+                            />
+                            <button className="z-[2] right-[3%] top-[15%] absolute all-unset">
+                                <img src="/search.svg" alt="" />
+                            </button>
+                        </div>
+                        <div className=""></div>
+                    </div>
+
+                    <div className="opacity-100 w-full pr-[2%] bg-blue-500 h-[2px] rounded-[10px] mx-auto"></div>
                 </header>
                 <main>
                     <Outlet />
