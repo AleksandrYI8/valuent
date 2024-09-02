@@ -12,9 +12,17 @@ export default {
       boxShadow: {
         'custom-shadow': '0 25px 25px 0 rgba(0, 3, 32, 0.5)',
       },
-},
+    },
   },
 
-plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.first-letter:uppercase::first-letter': {
+          textTransform: 'uppercase',
+        },
+      });
+    },
+  ],
 }
 

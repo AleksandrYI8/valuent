@@ -5,7 +5,9 @@ function home() {
         <>
         <h1>home</h1>
 
-        <Link to="/singin">log out</Link>
+        
+
+
         </>
     )
 }
