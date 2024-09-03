@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import LineChart from '../components/line';
 // Регистрация компонентов
 
 const home = () => {
@@ -116,10 +117,10 @@ const home = () => {
                         <button className='text-[16px] font-[600] p-[15px] pt-[5px] pb-[5px] bg-blue-500 rounded-[20px] text-center items-center'>Add Widget</button>
                     </div>
                 </div>
-                <div className="w-full">
+                <div className="w-full flex gap-[2%]">
                     <div className="w-[20%] rounded-[10px] flex flex-col relative gap-[10px] bg-background-balance shadow-custom-shadow pt-[0] p-[2%]">
                         <h1 className='text-[22px] pt-[1%] mb-[10px]'>Balance</h1>
-                        <div className="w-[70%] mx-auto mb-[15px]">
+                        <div className="w-[70%] mx-auto mb-[15px] xl:w-[80%]">
                             <Doughnut ref={chartRef} data={data} options={options} />
                         </div>
                         {label.map((el) => {
@@ -134,11 +135,14 @@ const home = () => {
                             </div>
                         })}
 
-                        <div className="absolute flex flex-col top-[28%] left-[36%]">
-                            <p className='text-[17px] text-blue-500'>BALANCE</p>
-                            <h1 className='text-[20px] text-center'>{label.reduce((a, b) => a + b.value, 0)} $</h1>
+                        <div className="absolute flex flex-col top-[28%] left-[35%] xl:top-[30%] xl:left-[37.1%]">
+                            <p className='text-[14px] text-blue-500 xl:text-[17px]'>BALANCE</p>
+                            <h1 className='text-[16px] text-center xl:text-[20px]'>{label.reduce((a, b) => a + b.value, 0)} $</h1>
                         </div>
                     </div>
+
+                        <LineChart className="w-[50%]"/>
+                    
 
                 </div>
             </div>
