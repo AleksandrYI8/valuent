@@ -91,7 +91,6 @@ function Singin() {
 
       
       localStorage.setItem('user', JSON.stringify(data));
-      alert("Welcome")
       navigate("/")
       reset()
     }

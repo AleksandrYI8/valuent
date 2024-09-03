@@ -47,43 +47,43 @@ function Loyaut() {
 
                     <ul className="flex flex-col gap-[5px]" >
                         <Link to={"/"}>
-                        <li className={`group transition-[.2s] cursor-pointer rounded-[10px] rounded-b-[0] ${ishome ? 'bg-gray-600' : 'bg-transparent'}`}>
-                            <div className={`opacity-[.5] flex items-center gap-[8%] p-[5%] ${ishome ? 'opacity-[1]' : 'opacity-[.5]'}`}>
-                                <img className="w-[18px]" src="/menu.svg" alt="" />
-                                <Link className={`text-white text-[16px] font-medium`}>Overview</Link>
-                            </div>
-                            <div className={`opacity-0 w-full bg-blue-500 h-[2px] rounded-[10px] mx-auto ${ishome ? 'opacity-[1]' : 'opacity-[0]'}`}></div>
-                        </li>
+                            <li className={`group transition-[.2s] cursor-pointer rounded-[10px] rounded-b-[0] ${ishome ? 'bg-gray-600' : 'bg-transparent'}`}>
+                                <div className={`opacity-[.5] flex items-center gap-[8%] p-[5%] ${ishome ? 'opacity-[1]' : 'opacity-[.5]'}`}>
+                                    <img className="w-[18px]" src="/menu.svg" alt="" />
+                                    <p className={`text-white text-[16px] font-medium`} >Overview</p>
+                                </div>
+                                <div className={`opacity-0 w-full bg-blue-500 h-[2px] rounded-[10px] mx-auto ${ishome ? 'opacity-[1]' : 'opacity-[0]'}`}></div>
+                            </li>
                         </Link>
                         <Link to={"/wallet"}>
-                        <li className={`group transition-[.2s] cursor-pointer rounded-[10px] rounded-b-[0] ${iswallet ? 'bg-gray-600' : 'bg-transparent'}`}>
-                            <div className={`opacity-[.5] flex items-center gap-[8%] p-[5%] ${iswallet ? 'opacity-[1]' : 'opacity-[.5]'}`}>
-                                <img className="w-[18px]" src="/wallet.svg" alt="" />
-                                <Link className={`text-white text-[16px] font-medium`} >Wallet</Link>
-                            </div>
-                            <div className={`opacity-0 w-full bg-blue-500 h-[2px] rounded-[10px] mx-auto ${iswallet ? 'opacity-[1]' : 'opacity-[0]'}`}></div>
-                        </li>
+                            <li className={`group transition-[.2s] cursor-pointer rounded-[10px] rounded-b-[0] ${iswallet ? 'bg-gray-600' : 'bg-transparent'}`}>
+                                <div className={`opacity-[.5] flex items-center gap-[8%] p-[5%] ${iswallet ? 'opacity-[1]' : 'opacity-[.5]'}`}>
+                                    <img className="w-[18px]" src="/wallet.svg" alt="" />
+                                    <p className={`text-white text-[16px] font-medium`}>Wallet</p>
+                                </div>
+                                <div className={`opacity-0 w-full bg-blue-500 h-[2px] rounded-[10px] mx-auto ${iswallet ? 'opacity-[1]' : 'opacity-[0]'}`}></div>
+                            </li>
 
                         </Link>
 
                         <Link to={"/transictions"}>
-                        <li className={`group transition-[.2s] cursor-pointer rounded-[10px] rounded-b-[0] ${isTrans ? 'bg-gray-600' : 'bg-transparent'}`}>
-                            <div className={`opacity-[.5] flex items-center gap-[8%] p-[5%] ${isTrans ? 'opacity-[1]' : 'opacity-[.5]'}`}>
-                                <img className="w-[18px]" src="/Transictions.svg" alt="" />
-                                <Link className={`text-white text-[16px] font-medium`} >Transictions</Link>
-                            </div>
-                            <div className={`opacity-0 w-full bg-blue-500 h-[2px] rounded-[10px] mx-auto ${isTrans ? 'opacity-[1]' : 'opacity-[0]'}`}></div>
-                        </li>
+                            <li className={`group transition-[.2s] cursor-pointer rounded-[10px] rounded-b-[0] ${isTrans ? 'bg-gray-600' : 'bg-transparent'}`}>
+                                <div className={`opacity-[.5] flex items-center gap-[8%] p-[5%] ${isTrans ? 'opacity-[1]' : 'opacity-[.5]'}`}>
+                                    <img className="w-[18px]" src="/Transictions.svg" alt="" />
+                                    <p className={`text-white text-[16px] font-medium`} >Transictions</p>
+                                </div>
+                                <div className={`opacity-0 w-full bg-blue-500 h-[2px] rounded-[10px] mx-auto ${isTrans ? 'opacity-[1]' : 'opacity-[0]'}`}></div>
+                            </li>
 
                         </Link>
                         <Link to={"/exchange"}>
-                        <li className={`group transition-[.2s] cursor-pointer rounded-[10px] rounded-b-[0] ${ischange ? 'bg-gray-600' : 'bg-transparent'}`}>
-                            <div className={`opacity-[.5] flex items-center gap-[8%] p-[5%] ${ischange ? 'opacity-[1]' : 'opacity-[.5]'}`}>
-                                <img className="w-[18px]" src="/change.svg" alt="" />
-                                <Link className={`text-white text-[16px] font-medium`} >Exchange</Link>
-                            </div>
-                            <div className={`opacity-0 w-full bg-blue-500 h-[2px] rounded-[10px] mx-auto ${ischange ? 'opacity-[1]' : 'opacity-[0]'}`}></div>
-                        </li>
+                            <li className={`group transition-[.2s] cursor-pointer rounded-[10px] rounded-b-[0] ${ischange ? 'bg-gray-600' : 'bg-transparent'}`}>
+                                <div className={`opacity-[.5] flex items-center gap-[8%] p-[5%] ${ischange ? 'opacity-[1]' : 'opacity-[.5]'}`}>
+                                    <img className="w-[18px]" src="/change.svg" alt="" />
+                                    <p className={`text-white text-[16px] font-medium`} >Exchange</p>
+                                </div>
+                                <div className={`opacity-0 w-full bg-blue-500 h-[2px] rounded-[10px] mx-auto ${ischange ? 'opacity-[1]' : 'opacity-[0]'}`}></div>
+                            </li>
 
                         </Link>
                     </ul>
@@ -98,12 +98,14 @@ function Loyaut() {
                             </div>
                         </li>
 
-                        <li className="cursor-pointer group transition-[.2s] hover:bg-gray-600 rounded-[10px]">
-                            <div className="opacity-[.5] flex items-center gap-[8%] p-[5%] group-hover:opacity-100">
-                                <img className="w-[18px]" src="/wallet.svg" alt="" />
-                                <Link className="text-white text-[16px] font-medium" to="/singin"> Log Out</Link>
-                            </div>
-                        </li>
+                        <Link to="/singin">
+                            <li className="cursor-pointer group transition-[.2s] hover:bg-gray-600 rounded-[10px]">
+                                <div className="opacity-[.5] flex items-center gap-[8%] p-[5%] group-hover:opacity-100">
+                                    <img className="w-[18px]" src="/wallet.svg" alt="" />
+                                    <p className="text-white text-[16px] font-medium" > Log Out</p>
+                                </div>
+                            </li>
+                        </Link>
 
 
                     </ul>
@@ -142,7 +144,7 @@ function Loyaut() {
                 </main>
 
             </div>
-        </div>
+        </div >
 
     )
 }
