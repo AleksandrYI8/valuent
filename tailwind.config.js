@@ -9,9 +9,11 @@ export default {
         'custom-form': 'linear-gradient(180deg, #1E1156 0%, rgba(28, 35, 64, 0) 100%);',
         'custom-shadow': '0 25px 25px 0 rgba(0, 3, 32, 0.5);',
         'custom-main': 'radial-gradient(46.41% 73.99% at 46.63% 48.05%, #20135C 0%, #140739 92.82%)',
-        'background-balance': 'linear-gradient(180deg, rgba(27, 18, 78, 0.2) 0%, #0F0B38 93.37%)'
-
-
+        'background-balance': 'linear-gradient(180deg, rgba(27, 18, 78, 0.2) 0%, #0F0B38 93.37%)',
+        'background-btc':' linear-gradient(237.07deg, #604392 -8.06%, #0F0B38 96.63%);',
+        'background-eth':' linear-gradient(237.07deg, #6162D6 -8.06%, #0F0B38 96.63%);',
+        'background-grc':'linear-gradient(237.07deg, #D66168 -8.06%, #0F0B38 96.63%);',
+        'background-ae':' linear-gradient(237.07deg, #EB8338 -8.06%, #0F0B38 96.63%);',
         
       },
       boxShadow: {

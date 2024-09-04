@@ -9,6 +9,40 @@ const home = () => {
 
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const arr = [
+        {
+            title: "Bitcoin",
+            balance: "600 BTC",
+            bg: 'bg-background-btc',
+            img: "/btc.svg",
+            mini: "btc",
+            imgbg: "bg-purple-600"
+        },
+        {
+            title: "Ethereum",
+            balance: "600 ETH",
+            bg: 'bg-background-eth',
+            img: "/eth.svg",
+            mini: "eth",
+            imgbg: "bg-blue-400"
+        },
+        {
+            title: "GridCoin",
+            balance: "600 GRC",
+            bg: 'bg-background-grc',
+            img: "/grc.svg",
+            mini: "grc",
+            imgbg: "bg-red-400"
+        },
+        {
+            title: "Aeternity",
+            balance: "600 AE",
+            bg: 'bg-background-ae',
+            img: "/ae.svg",
+            mini: "ae",
+            imgbg: "bg-orange-500"
+        }
+    ]
 
 
 
@@ -123,8 +157,8 @@ const home = () => {
                         <div className="w-[70%] mx-auto mb-[15px] xl:w-[80%]">
                             <Doughnut ref={chartRef} data={data} options={options} />
                         </div>
-                        {label.map((el) => {
-                            return <div key={el.index} className='flex justify-between' >
+                        {label.map((el, index) => {
+                            return <div key={index} className='flex justify-between' >
                                 <div className="flex items-center gap-[5px]">
                                     <div className={` w-[15px] h-[15px] shadow-balabce-box-shadow rounded-[50%] bg-blue-500`}></div>
                                     <p className='text-[16px]'>{el.label}</p>
@@ -141,8 +175,57 @@ const home = () => {
                         </div>
                     </div>
 
-                        <LineChart className="w-[50%]"/>
-                    
+                    <LineChart className="w-[50%]" />
+
+                    <div className="w-[55%] pr-[2%] gap-[3%] flex flex-wrap">
+                        {arr.map((data, index) => {
+                           return <div key={index} className={`w-[48%] ${data.bg}  mb-[0] h-[22vh] rounded-[10px] shadow-custom-shadow pt-[2%] pr-[1%] pl-[1%] pb-[0]`}>
+                                <h2 className='text-[18px]'>{data.title}</h2>
+                                <div className="flex justify-between">
+                                    <div className="flex pl-[2%] items-center gap-[10px]">
+                                        <div className={`${data.imgbg} w-[50px] h-[50px] flex justify-center  rounded-[50%]`}>
+                                            <img className='w-[30px]' src={data.img} alt="" />
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <p className='text-[17px]'>{data.balance}</p>
+                                            <span className='text-[15px] text-gray-400'>$30,000,000</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col gap-[10px] pr-[1%] items-center">
+                                        <div className="flex items-center">
+                                            <div className="flex items-center">
+                                                <img className='w-[40px]' src="/arrow.svg" alt="" />
+                                            </div>
+                                            <div className="border-b">
+                                                <p className='text-[12px]'>$1 200 = 0,074 {data.mini}</p>
+                                                <p className='text-[10px] text-gray-400'>1 {data.mini} = $6,542</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center">
+                                            <div className="">
+                                                <img className='w-[40px]' src="/arrow.svg" alt="" />
+                                            </div>
+                                            <div className="border-b">
+                                                <p className='text-[12px]'>$1 200 = 0,074 {data.mini}</p>
+                                                <p className='text-[10px] text-gray-400'>1 {data.mini} = $6,542</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center">
+                                            <div className="">
+                                                <img className='w-[40px]' src="/arrow.svg" alt="" />
+                                            </div>
+                                            <div className="border-b">
+                                                <p className='text-[12px]'>$1 200 = 0,074 {data.mini}</p>
+                                                <p className='text-[10px] text-gray-400'>1 {data.mini} = $6,542</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        })}
+                    </div>
+
 
                 </div>
             </div>
