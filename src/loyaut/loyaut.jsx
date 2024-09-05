@@ -40,7 +40,7 @@ function Loyaut() {
 
     return (
         <div className="w-full flex bg-custom-main" >
-            <div className=" flex flex-col justify-between h-[100vh] w-[20%] p-[1%] shadow-menu-shadow">
+            <div className=" flex overflow-hidden flex-col justify-between h-[100vh] w-[20%] p-[1%] shadow-menu-shadow">
                 <div className="">
                     <h1 className="text-[25px] text-blue-500 text-center mb-[0px]" >VALUET</h1>
                     <div className="w-[35%] bg-blue-500 h-[2px] mb-[40px] rounded mx-auto"></div>
@@ -115,7 +115,7 @@ function Loyaut() {
 
             <div className="w-[80%]">
 
-                <header className="p-[2%] pt-[1%] pb-0 w-full" >
+                <header className="overflow-hidden p-[2%] pt-[1%] pb-0 w-full" >
 
                     <div className="flex justify-between items-center w-[100%] mb-[1%]">
                         <div className="relative w-[25%]">
@@ -139,7 +139,7 @@ function Loyaut() {
 
                     <div className="opacity-100 w-full pr-[2%] bg-blue-500 h-[2px] rounded-[10px] mx-auto"></div>
                 </header>
-                <main>
+                <main className="overflow-auto h-[calc(100vh-100px)] ">
                     <Outlet />
                 </main>
 

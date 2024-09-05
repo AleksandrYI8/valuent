@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import LineChart from '../components/line';
+import LineChart_sec from '../components/secLine';
 // Регистрация компонентов
 
 const home = () => {
@@ -224,9 +225,13 @@ const home = () => {
                             </div>
 
                         })}
+
                     </div>
 
 
+                </div>
+                <div className="">
+                    <LineChart_sec/>
                 </div>
             </div>
         </>
