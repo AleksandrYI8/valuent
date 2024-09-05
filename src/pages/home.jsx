@@ -3,6 +3,7 @@ import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import LineChart from '../components/line';
 import LineChart_sec from '../components/secLine';
+
 // Регистрация компонентов
 
 const home = () => {
@@ -44,6 +45,64 @@ const home = () => {
             imgbg: "bg-orange-500"
         }
     ]
+
+    const sec_arr = [
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+
+        {
+            title: "SEC Fails to Show Court Blockvest Tokens Are",
+            date: "19 hours ago"
+        },
+    ]
+
+
 
 
 
@@ -132,14 +191,6 @@ const home = () => {
         }
     }, []);
 
-
-
-
-
-
-
-
-    console.log(label);
     return (
         <>
             <div className="w-full text-[50px] text-white pl-[2%]">
@@ -152,7 +203,7 @@ const home = () => {
                         <button className='text-[16px] font-[600] p-[15px] pt-[5px] pb-[5px] bg-blue-500 rounded-[20px] text-center items-center'>Add Widget</button>
                     </div>
                 </div>
-                <div className="w-full flex gap-[2%]">
+                <div className="w-full mb-[3%] flex gap-[2%]">
                     <div className="w-[20%] rounded-[10px] flex flex-col relative gap-[10px] bg-background-balance shadow-custom-shadow pt-[0] p-[2%]">
                         <h1 className='text-[22px] pt-[1%] mb-[10px]'>Balance</h1>
                         <div className="w-[70%] mx-auto mb-[15px] xl:w-[80%]">
@@ -180,7 +231,7 @@ const home = () => {
 
                     <div className="w-[55%] pr-[2%] gap-[3%] flex flex-wrap">
                         {arr.map((data, index) => {
-                           return <div key={index} className={`w-[48%] ${data.bg}  mb-[0] h-[22vh] rounded-[10px] shadow-custom-shadow pt-[2%] pr-[1%] pl-[1%] pb-[0]`}>
+                            return <div key={index} className={`w-[48%] ${data.bg}  mb-[2$] h-[22vh] rounded-[10px] shadow-custom-shadow pt-[1%] pr-[1%] pl-[1%] pb-[0]`}>
                                 <h2 className='text-[18px]'>{data.title}</h2>
                                 <div className="flex justify-between">
                                     <div className="flex pl-[2%] items-center gap-[10px]">
@@ -230,8 +281,24 @@ const home = () => {
 
 
                 </div>
-                <div className="">
-                    <LineChart_sec/>
+                <div className="flex gap-[2%]">
+                    <LineChart_sec />
+                    <div className="w-[33%] h-[38vh]  overflow-auto hide-scroll pr-[2%] bg-background-balance shadow-custom-shadow p-[1%]">
+                        <h1 className='text-[16px] mb-[1%]'>Recent News</h1>
+                        <div className="w-full h-[1px] mb-[2%] bg-blue-500"></div>
+                        <div className="flex flex-col">
+                        {sec_arr.map ((el) => {
+                        return    <div className="flex gap-[1%]  mb-[1%]">
+                                <p className='text-[14px]  leading-tight w-[29%] text-gray-600'>{el.date}</p>
+                                <p className='text-[14px] leading-tight w-[70%]'>{el.title}</p>
+                            </div>
+                        })}    
+
+
+
+                          
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

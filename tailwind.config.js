@@ -21,8 +21,11 @@ export default {
         'menu-shadow':'0px -5px 25px 0px rgba(0, 3, 32, 0.5)',
         'main-box-shadow': '0px 15px 40px 0px rgba(0, 0, 0, 0.25)',
         'balabce-box-shadow': '0px 4px 4px 0px rgba(0, 151, 232, 0.2)'
-
-
+      },
+      scrollbarHide: {
+        '.hide-scroll': {
+          '-webkit-scrollbar': 'none',
+        },
       },
     },
   },

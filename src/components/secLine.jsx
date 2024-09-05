@@ -23,12 +23,11 @@ const LineChart_sec = () => {
         datasets: [
             {
                 label: 'Dataset 1',
-                data: [2000,1500,4000, 3000, 4000,2000,4000],
+                data:[1000,2000,1000, 2000, 2500,2000,2000, 2500],
                 fill: false,
                 borderColor: 'rgba(0, 102, 204, 0.7)',
                 tension: .4,
                 borderWidth: 3,
-                borderRadius: 10,
             },
 
         ],
@@ -50,12 +49,12 @@ const LineChart_sec = () => {
                 display: true,
             }
         },
-        maintainAspectRatio: true,
+        maintainAspectRatio: false, //
     };
 
 
     return (
-        <div className='w-[70%] flex flex-col items-start justify-between bg-background-balance shadow-custom-shadow rounded-[10px]'>
+        <div className='w-[65%] pb-[4%] bg-background-balance shadow-custom-shadow h-[38vh] flex flex-col items-start justify-between  rounded-[10px]'>
             <h2 className='pl-[5%] text-[22px] text-white pt-[0] mb-[15px]'>Market</h2>
             <Line data={data} options={options} />
         </div>
