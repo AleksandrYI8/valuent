@@ -56,10 +56,10 @@ const LineChart = () => {
 
     return (
         <div className='w-[25%] flex flex-col items-start justify-between bg-background-balance shadow-custom-shadow rounded-[10px]'>
-            <h2 className='pl-[5%] text-[22px] text-white pt-[0] mb-[15px]'>Spending</h2>
+            <h2 className='pl-[5%] lg:text-[16px] xl:text-[22px] text-white pt-[0] mb-[15px]'>Spending</h2>
             <div className="flex flex-col gap-[0px] pl-[5%]">
-                <p className='text-[35px] text-white'>$ {data.datasets[0].data.reduce((a,b) => a+b ,0)}</p>
-                <span className='text-[15px] text-gray-600 mb-[15px]'>total spending</span>
+                <p className='lg:text-[30px] xl:text-[35px] text-white'>$ {data.datasets[0].data.reduce((a,b) => a+b ,0)}</p>
+                <span className='lg:text-[13px] xl:text-[15px] text-gray-600 mb-[15px]'>total spending</span>
             </div>
             <Line data={data} options={options} />
         </div>

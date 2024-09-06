@@ -54,8 +54,8 @@ const LineChart_sec = () => {
 
 
     return (
-        <div className='w-[65%] pb-[4%] bg-background-balance shadow-custom-shadow h-[38vh] flex flex-col items-start justify-between  rounded-[10px]'>
-            <h2 className='pl-[5%] text-[22px] text-white pt-[0] mb-[15px]'>Market</h2>
+        <div className='w-[65%] lg:h-[34vh] pb-[4%] bg-background-balance shadow-custom-shadow xl:h-[38vh] flex flex-col items-start justify-between  rounded-[10px]'>
+            <h2 className='pl-[5%] lg:text-[16px] xl:text-[22px] text-white pt-[0] mb-[15px]'>Market</h2>
             <Line data={data} options={options} />
         </div>
     );

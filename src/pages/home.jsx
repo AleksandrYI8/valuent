@@ -196,34 +196,34 @@ const home = () => {
             <div className="w-full text-[50px] text-white pl-[2%]">
                 <div className="flex justify-between pt-[2%] mb-[2%] pr-[2%] items-center">
                     <div className="flex gap-[40px] items-center">
-                        <h1 className='text-[18px]'>Overview</h1>
-                        <p className='text-[18px] text-gray-500'>{count} {month_word}, {day_word}</p>
+                        <h1 className='lg:text-[16px] xl:text-[18px]'>Overview</h1>
+                        <p className='lg:text-[16px] xl:text-[18px] text-gray-500'>{count} {month_word}, {day_word}</p>
                     </div>
                     <div className="flex items-center">
-                        <button className='text-[16px] font-[600] p-[15px] pt-[5px] pb-[5px] bg-blue-500 rounded-[20px] text-center items-center'>Add Widget</button>
+                        <button className='lg:text-[14px] xl:text-[16px] font-[600] p-[15px] pt-[5px] pb-[5px] bg-blue-500 rounded-[20px] text-center items-center'>Add Widget</button>
                     </div>
                 </div>
                 <div className="w-full mb-[3%] flex gap-[2%]">
                     <div className="w-[20%] rounded-[10px] flex flex-col relative gap-[10px] bg-background-balance shadow-custom-shadow pt-[0] p-[2%]">
-                        <h1 className='text-[22px] pt-[1%] mb-[10px]'>Balance</h1>
-                        <div className="w-[70%] mx-auto mb-[15px] xl:w-[80%]">
+                        <h1 className='lg:text-[16px] xl:text-[22px] pt-[1%] mb-[10px]'>Balance</h1>
+                        <div className="lg:w-[70%] mx-auto mb-[15px] xl:w-[80%]">
                             <Doughnut ref={chartRef} data={data} options={options} />
                         </div>
                         {label.map((el, index) => {
                             return <div key={index} className='flex justify-between' >
                                 <div className="flex items-center gap-[5px]">
-                                    <div className={` w-[15px] h-[15px] shadow-balabce-box-shadow rounded-[50%] bg-blue-500`}></div>
-                                    <p className='text-[16px]'>{el.label}</p>
+                                    <div className={`lg:w-[13px] w-[15px] h-[15px] shadow-balabce-box-shadow rounded-[50%] bg-blue-500`}></div>
+                                    <p className='lg:text-[14px] text-[16px]'>{el.label}</p>
                                 </div>
                                 <div className="">
-                                    <p className='text-[16px]'>{Math.floor(el.percentage)}%</p>
+                                    <p className='lg:text-[14px] text-[16px]'>{Math.floor(el.percentage)}%</p>
                                 </div>
                             </div>
                         })}
 
-                        <div className="absolute flex flex-col top-[28%] left-[35%] xl:top-[30%] xl:left-[37.1%]">
-                            <p className='text-[14px] text-blue-500 xl:text-[17px]'>BALANCE</p>
-                            <h1 className='text-[16px] text-center xl:text-[20px]'>{label.reduce((a, b) => a + b.value, 0)} $</h1>
+                        <div className="absolute flex flex-col lg:top-[26%] lg:left-[36%] xl:top-[30%] xl:left-[37.1%]">
+                            <p className='lg:text-[11px] text-blue-500 xl:text-[17px]'>BALANCE</p>
+                            <h1 className='lg:text-[12px] text-center xl:text-[20px]'>{label.reduce((a, b) => a + b.value, 0)} $</h1>
                         </div>
                     </div>
 
@@ -231,44 +231,44 @@ const home = () => {
 
                     <div className="w-[55%] pr-[2%] gap-[3%] flex flex-wrap">
                         {arr.map((data, index) => {
-                            return <div key={index} className={`w-[48%] ${data.bg}  mb-[2$] h-[22vh] rounded-[10px] shadow-custom-shadow pt-[1%] pr-[1%] pl-[1%] pb-[0]`}>
-                                <h2 className='text-[18px]'>{data.title}</h2>
-                                <div className="flex justify-between">
-                                    <div className="flex pl-[2%] items-center gap-[10px]">
-                                        <div className={`${data.imgbg} w-[50px] h-[50px] flex justify-center  rounded-[50%]`}>
-                                            <img className='w-[30px]' src={data.img} alt="" />
+                            return <div key={index} className={`w-[48%] lg:h-[19vh] ${data.bg} lg:mb-[2%]  mb-[2%] xl:h-[22vh] rounded-[10px] shadow-custom-shadow xl:pt-[1%] lg:pt-[.5%] pr-[1%] pl-[1%] pb-[0]`}>
+                                <h2 className='lg:text-[16px] xl:text-[18px]'>{data.title}</h2>
+                                <div className="flex xl:justify-between items-center">
+                                    <div className="flex pl-[2%] gap-[5px]">
+                                        <div className={`${data.imgbg} lg:w-[32px] lg:h-[32px] xl:w-[50px] xl:h-[50px] flex justify-center  rounded-[50%]`}>
+                                            <img className='lg:w-[17px] xl:w-[30px]' src={data.img} alt="" />
                                         </div>
-                                        <div className="flex flex-col">
-                                            <p className='text-[17px]'>{data.balance}</p>
-                                            <span className='text-[15px] text-gray-400'>$30,000,000</span>
+                                        <div className="flex flex-col items-center">
+                                            <p className='lg:text-[12px] xl:text-[17px]'>{data.balance}</p>
+                                            <span className='lg:text-[11px] xl:text-[15px] text-gray-400'>$30,000,0</span>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-[10px] pr-[1%] items-center">
                                         <div className="flex items-center">
                                             <div className="flex items-center">
-                                                <img className='w-[40px]' src="/arrow.svg" alt="" />
+                                                <img className='lg:w-[20px] xl:w-[40px]' src="/arrow.svg" alt="" />
                                             </div>
-                                            <div className="border-b">
-                                                <p className='text-[12px]'>$1 200 = 0,074 {data.mini}</p>
-                                                <p className='text-[10px] text-gray-400'>1 {data.mini} = $6,542</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center">
-                                            <div className="">
-                                                <img className='w-[40px]' src="/arrow.svg" alt="" />
-                                            </div>
-                                            <div className="border-b">
-                                                <p className='text-[12px]'>$1 200 = 0,074 {data.mini}</p>
-                                                <p className='text-[10px] text-gray-400'>1 {data.mini} = $6,542</p>
+                                            <div className="border-b pb-[3px]">
+                                                <p className='lg:text-[9px] xl:text-[12px]'>$1 200 = 0,074 {data.mini}</p>
+                                                <p className='lg:text-[7px]  xl:text-[10px] text-gray-400'>1 {data.mini} = $6,542</p>
                                             </div>
                                         </div>
                                         <div className="flex items-center">
-                                            <div className="">
-                                                <img className='w-[40px]' src="/arrow.svg" alt="" />
+                                            <div className="flex items-center">
+                                                <img className='lg:w-[20px] xl:w-[40px]' src="/arrow.svg" alt="" />
                                             </div>
-                                            <div className="border-b">
-                                                <p className='text-[12px]'>$1 200 = 0,074 {data.mini}</p>
-                                                <p className='text-[10px] text-gray-400'>1 {data.mini} = $6,542</p>
+                                            <div className="border-b pb-[3px]">
+                                                <p className='lg:text-[9px] xl:text-[12px]'>$1 200 = 0,074 {data.mini}</p>
+                                                <p className='lg:text-[7px] xl:text-[10px] text-gray-400'>1 {data.mini} = $6,542</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center">
+                                            <div className="flex items-center">
+                                                <img className='lg:w-[20px] xl:w-[40px]' src="/arrow.svg" alt="" />
+                                            </div>
+                                            <div className="border-b pb-[3px]">
+                                                <p className='lg:text-[9px] xl:text-[12px]'>$1 200 = 0,074 {data.mini}</p>
+                                                <p className='lg:text-[7px] xl:text-[10px] text-gray-400'>1 {data.mini} = $6,542</p>
                                             </div>
                                         </div>
                                     </div>
@@ -283,14 +283,14 @@ const home = () => {
                 </div>
                 <div className="flex gap-[2%]">
                     <LineChart_sec />
-                    <div className="w-[33%] h-[38vh]  overflow-auto hide-scroll pr-[2%] bg-background-balance shadow-custom-shadow p-[1%]">
-                        <h1 className='text-[16px] mb-[1%]'>Recent News</h1>
+                    <div className="w-[33%] lg:h-[34vh] xl:h-[38vh]  overflow-auto hide-scroll pr-[2%] bg-background-balance shadow-custom-shadow p-[1%]">
+                        <h1 className='lg:text-[14px] xl:text-[16px] mb-[1%]'>Recent News</h1>
                         <div className="w-full h-[1px] mb-[2%] bg-blue-500"></div>
                         <div className="flex flex-col">
                         {sec_arr.map ((el) => {
-                        return    <div className="flex gap-[1%]  mb-[1%]">
-                                <p className='text-[14px]  leading-tight w-[29%] text-gray-600'>{el.date}</p>
-                                <p className='text-[14px] leading-tight w-[70%]'>{el.title}</p>
+                        return    <div className="flex w-full justify-between items-center mb-[5%]">
+                                <p className='lg:text-[12px] xl:text-[14px]  leading-tight lg:w-[38%] text-gray-600'>{el.date}</p>
+                                <p className='lg:text-[12px] xl:text-[14px] leading-tight lg:w-[60%]'>{el.title}</p>
                             </div>
                         })}    
 
