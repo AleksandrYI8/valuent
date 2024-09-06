@@ -282,21 +282,24 @@ const home = () => {
 
                 </div>
                 <div className="flex gap-[2%]">
-                    <LineChart_sec />
-                    <div className="w-[33%] lg:h-[34vh] xl:h-[38vh]  overflow-auto hide-scroll pr-[2%] bg-background-balance shadow-custom-shadow p-[1%]">
+                    <div className={`w-[70%] lg:h-[34vh] pb-[4%] bg-background-balance shadow-custom-shadow xl:h-[38vh] flex flex-col items-start justify-between  rounded-[10px]`}>
+                        <h2 className='pl-[5%] lg:text-[16px] xl:text-[22px] text-white pt-[0] mb-[15px]'>Market</h2>
+                        <LineChart_sec />
+                    </div>
+                    <div className="w-[33%] lg:h-[34vh] xl:h-[38vh]  overflow-auto no-scrollbar pr-[2%] bg-background-balance shadow-custom-shadow p-[1%]">
                         <h1 className='lg:text-[14px] xl:text-[16px] mb-[1%]'>Recent News</h1>
                         <div className="w-full h-[1px] mb-[2%] bg-blue-500"></div>
                         <div className="flex flex-col">
-                        {sec_arr.map ((el) => {
-                        return    <div className="flex w-full justify-between items-center mb-[5%]">
-                                <p className='lg:text-[12px] xl:text-[14px]  leading-tight lg:w-[38%] text-gray-600'>{el.date}</p>
-                                <p className='lg:text-[12px] xl:text-[14px] leading-tight lg:w-[60%]'>{el.title}</p>
-                            </div>
-                        })}    
+                            {sec_arr.map((el) => {
+                                return <div className="flex w-full justify-between items-center mb-[5%]">
+                                    <p className='lg:text-[12px] xl:text-[14px]  leading-tight lg:w-[38%] text-gray-600'>{el.date}</p>
+                                    <p className='lg:text-[12px] xl:text-[14px] leading-tight lg:w-[60%]'>{el.title}</p>
+                                </div>
+                            })}
 
 
 
-                          
+
                         </div>
                     </div>
                 </div>

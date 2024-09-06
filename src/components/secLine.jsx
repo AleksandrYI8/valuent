@@ -17,7 +17,7 @@ ChartJS.register(
     Legend,
 );
 
-const LineChart_sec = () => {
+const LineChart_sec = (w) => {
     const data = {
         labels: ["NOV 15", "NOV 16", "NOV 17", "NOV 18", "NOV 19", "NOV 20", "NOV 21", "NOV 22"],
         datasets: [
@@ -54,10 +54,9 @@ const LineChart_sec = () => {
 
 
     return (
-        <div className='w-[65%] lg:h-[34vh] pb-[4%] bg-background-balance shadow-custom-shadow xl:h-[38vh] flex flex-col items-start justify-between  rounded-[10px]'>
-            <h2 className='pl-[5%] lg:text-[16px] xl:text-[22px] text-white pt-[0] mb-[15px]'>Market</h2>
+        <>
             <Line data={data} options={options} />
-        </div>
+        </>
     );
 };
 

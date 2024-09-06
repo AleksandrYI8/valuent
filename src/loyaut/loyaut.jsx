@@ -139,7 +139,7 @@ function Loyaut() {
 
                     <div className="opacity-100 w-full pr-[2%] bg-blue-500 h-[2px] rounded-[10px] mx-auto"></div>
                 </header>
-                <main className="overflow-auto h-[calc(100vh-100px)] ">
+                <main className="overflow-auto no-scrollbar h-[calc(100vh-100px)] ">
                     <Outlet />
                 </main>
 
