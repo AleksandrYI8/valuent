@@ -19,11 +19,11 @@ ChartJS.register(
 
 const LineChart_sec = (w) => {
     const data = {
-        labels: ["NOV 15", "NOV 16", "NOV 17", "NOV 18", "NOV 19", "NOV 20", "NOV 21", "NOV 22"],
+        labels: ["NOV 15", "NOV 16", "NOV 17", "NOV 18", "NOV 19", "NOV 20",],
         datasets: [
             {
                 label: 'Dataset 1',
-                data:[1000,2000,1000, 2000, 2500,2000,2000, 2500],
+                data:[1000,2000,1000, 2000, 2500,2000,],
                 fill: false,
                 borderColor: 'rgba(0, 102, 204, 0.7)',
                 tension: .4,

@@ -204,9 +204,13 @@ const home = () => {
                     </div>
                 </div>
                 <div className="w-full mb-[3%] flex gap-[1%]">
-                    <div className="w-[30%] h-[25vh] rounded-[10px] flex justify-between items-center pl-[0] relative  bg-background-balance shadow-custom-shadow pt-[0] p-[2%]">
-                        <div className="lg:w-[35%] mx-auto  xl:w-[40%]">
+                    <div className="w-[30%] lg:h-[19vh]  xl:h-[25vh] rounded-[10px] flex justify-between items-center pl-[0] bg-background-balance shadow-custom-shadow pt-[0] p-[2%]">
+                        <div className="lg:w-[35%] mx-auto relative  xl:w-[40%]">
                             <Doughnut ref={chartRef} data={data} options={options} />
+                            <div className="absolute flex flex-col lg:top-[30%] lg:left-[27%] xl:top-[32%] xl:left-[25%]">
+                                <p className='lg:text-[10px] text-blue-500 xl:text-[17px]'>BALANCE</p>
+                                <h1 className='lg:text-[11px] text-center xl:text-[20px]'>{label.reduce((a, b) => a + b.value, 0)} $</h1>
+                            </div>
                         </div>
                         <div className="flex flex-col pt-[15px]">
                             {label.map((el, index) => {
@@ -220,14 +224,11 @@ const home = () => {
                             })}
                         </div>
 
-                        <div className="absolute flex flex-col lg:top-[26%] lg:left-[36%] xl:top-[25%] xl:left-[18%]">
-                            <p className='lg:text-[11px] text-blue-500 xl:text-[17px]'>BALANCE</p>
-                            <h1 className='lg:text-[12px] text-center xl:text-[20px]'>{label.reduce((a, b) => a + b.value, 0)} $</h1>
-                        </div>
+
                     </div>
 
 
-                    <div className="w-[68%] pr-[2%] gap-[3%] bg-background-balance shadow-custom-shadow rounded-[10px] flex overflow-x-auto no-scrollbar whitespace-nowrap">
+                    <div className="w-[68%] lg:h-[19vh] xl:h-[25vh] mr-[2%]  gap-[3%] bg-background-balance shadow-custom-shadow rounded-[10px] flex overflow-x-auto no-scrollbar whitespace-nowrap">
                         {arr.map((data, index) => {
                             return <div key={index} className={`inline-block min-w-[38%] lg:h-[19vh] ${data.bg} lg:mb-[2%]  mb-[2%] xl:h-[25vh] rounded-[10px] shadow-custom-shadow xl:pt-[1%] lg:pt-[.5%] pr-[1%] pl-[1%] pb-[0]`}>
                                 <h2 className='lg:text-[16px] xl:text-[18px]'>{data.title}</h2>
@@ -280,16 +281,16 @@ const home = () => {
 
                 </div>
                 <div className="flex gap-[2%]">
-                <div className={`w-[49%] lg:h-[34vh]  bg-background-balance shadow-custom-shadow xl:h-[40vh] flex flex-col items-start justify-between  rounded-[10px]`}>
+                    <div className={`w-[49%] lg:h-[34vh]  bg-background-balance shadow-custom-shadow xl:h-[40vh] flex flex-col items-start justify-between  rounded-[10px]`}>
                         <LineChart_sec />
                     </div>
                     <div className="w-[49%] lg:h-[34vh] xl:h-[40vh] pr-[2%] bg-background-balance shadow-custom-shadow p-[1%]">
                         <h1 className='lg:text-[14px] xl:text-[16px] mb-[1%]'>Recent News</h1>
                         <div className="w-full h-[1px] mb-[2%] bg-blue-500"></div>
-                        <div className="flex overflow-auto no-scrollbar h-[33vh] flex-col">
+                        <div className="flex overflow-auto no-scrollbar lg:h-[28vh] xl:h-[33vh] pt-[1%] flex-col">
                             {sec_arr.map((el) => {
-                                return <div className="flex w-full justify-between items-center mb-[5%]">
-                                    <p className='lg:text-[12px] xl:text-[14px]  leading-tight lg:w-[38%] text-gray-600'>{el.date}</p>
+                                return <div className="flex w-full justify-between  items-center mb-[5%]">
+                                    <p className='lg:text-[12px] xl:text-[14px]  leading-tight  lg:w-[38%] text-gray-600'>{el.date}</p>
                                     <p className='lg:text-[12px] xl:text-[14px] leading-tight lg:w-[60%]'>{el.title}</p>
                                 </div>
                             })}
